@@ -37,7 +37,7 @@ from typing import Any
 
 
 # ---------------------------------------------------------------------------
-# 导入 rizChartFunction（优先使用已安装包，其次使用同级的 pytool/src）
+# 导入 rizChartFunction（优先使用已安装包，其次使用同级的库版本目录）
 # ---------------------------------------------------------------------------
 
 def _load_library():
@@ -52,16 +52,12 @@ def _load_library():
     env_src = os.environ.get("RIZCHARTFUNCTION_SRC")
     if env_src:
         candidates.append(Path(env_src))
-    candidates.extend(
-        [
-            here.parent.parent / "rizChartFunction_Library" / "src",
-            here.parent / "rizChartFunction_Library" / "src",
-            Path.cwd() / "rizChartFunction_Library" / "src",
-            here.parent.parent / "pytool" / "src",
-            here.parent / "pytool" / "src",
-            Path.cwd() / "pytool" / "src",
-        ]
-    )
+    bases = [here.parent.parent, here.parent, Path.cwd()]
+    for base in bases:
+        for repo in ("rizChartFunction_Library", "pytool"):
+            for version in ("0.2.0", "0.1.0"):
+                candidates.append(base / repo / version / "src")
+            candidates.append(base / repo / "src")
 
     for candidate in candidates:
         if (candidate / "rizChartFunction").is_dir():

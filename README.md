@@ -35,7 +35,7 @@
 
 ```powershell
 git clone https://github.com/xp00000002/rizChartFunction_Library.git
-cd rizChartFunction_Library
+cd rizChartFunction_Library\0.2.0
 python -m pip install -e .
 ```
 
@@ -54,13 +54,14 @@ import rizChartFunction as rcf
 本工具会按以下顺序查找前置库：
 
 1. 已安装的 `rizChartFunction` 包；
-2. 同级的 `rizChartFunction_Library/src` 或 `pytool/src`；
-3. 环境变量 `RIZCHARTFUNCTION_SRC` 指向的 `src` 目录。
+2. 同级的 `rizChartFunction_Library/0.2.0/src` 或 `rizChartFunction_Library/0.1.0/src`；
+3. 同级的 `pytool/0.2.0/src` 或 `pytool/0.1.0/src`；
+4. 环境变量 `RIZCHARTFUNCTION_SRC` 指向的 `src` 目录。
 
 也可以手动设置：
 
 ```powershell
-$env:RIZCHARTFUNCTION_SRC = "path\to\rizChartFunction_Library\src"
+$env:RIZCHARTFUNCTION_SRC = "path\to\rizChartFunction_Library\0.2.0\src"
 ```
 
 ## 快速开始
