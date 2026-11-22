@@ -181,14 +181,14 @@ python ring_checker.py chart.json --stationary-line
 python ring_checker.py chart.json --background-tolerance 2
 
 # 搜索 Note 周围线形心模拟的判定环
-python ring_checker.py chart.json --range-search \
+python ring_checker.py chart.json --range-search `
   --range-x 0.05 --range-y 0.1
 
 # 调整静止线判定
-python ring_checker.py chart.json --stationary-line \
-  --stationary-window 0.2 \
-  --stationary-tolerance 0.002 \
-  --stationary-speed-tolerance 0.01 \
+python ring_checker.py chart.json --stationary-line `
+  --stationary-window 0.2 `
+  --stationary-tolerance 0.002 `
+  --stationary-speed-tolerance 0.01 `
   --stationary-min-alpha 1
 
 # 放宽其他线覆盖 Note 的坐标容差
