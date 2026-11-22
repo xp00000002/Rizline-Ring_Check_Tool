@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local chart data and generated reports
+charts/
+charts-result/
+officalcharts/
+officalcharts-result/
+*_report.txt
+*_report.json
+*-result.txt
+*-result.json
+*-result.csv
+_summary.json
+_summary.csv
