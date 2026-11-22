@@ -149,9 +149,9 @@ Hold 只检查头部时间；Hold 尾部没有终点判定，不在本工具范�
 
 脚本会自动尝试导入 `rizChartFunction`：
 1. 优先使用已安装的包；
-2. 其次使用同级的 `rizChartFunction_Library/0.2.0/src` 或 `0.1.0/src`；
-3. 也兼容本地的 `pytool/0.2.0/src` 或 `pytool/0.1.0/src`；
-4. 也可以设置环境变量 `RIZCHARTFUNCTION_SRC` 指向库的 `src` 目录。
+2. 其次使用环境变量 `RIZCHARTFUNCTION_SRC` 指向的 `src` 目录；
+3. 再使用同级的 `rizChartFunction_Library/0.2.0/src` 或 `0.1.0/src`；
+4. 也兼容本地的 `pytool/0.2.0/src` 或 `pytool/0.1.0/src`。
 
 ```powershell
 cd path\to\Rizline-Ring_Check_Tool
